@@ -1,3 +1,4 @@
+import { FourService } from './four.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FourComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private fourService: FourService
+  ) { }
 
   ngOnInit() {
+    this.fourService.setFoo(1);
+    // this.fourService.setBehaviourFoo(2);
   }
 
 }
